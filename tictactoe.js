@@ -53,11 +53,13 @@ const enableBoxes = () =>{
 const showWinner = (winner) =>{
     msg.innerText = `Congratulations the winner is ${winner}`;
     msg_container.classList.remove("hide");
+    btnclicks = 0;
 }
 
 const draw = () =>{
     msg.innerText = `Draw`;
     msg_container.classList.remove("hide");
+    btnclicks = 0;
 }
 
 const checkwinner = () =>{
