@@ -53,13 +53,11 @@ const enableBoxes = () =>{
 const showWinner = (winner) =>{
     msg.innerText = `Congratulations the winner is ${winner}`;
     msg_container.classList.remove("hide");
-    btnclicks = 0;
 }
 
 const draw = () =>{
     msg.innerText = `Draw`;
     msg_container.classList.remove("hide");
-    btnclicks = 0;
 }
 
 const checkwinner = () =>{
@@ -71,8 +69,10 @@ const checkwinner = () =>{
             if(pos1val===pos2val && pos2val===pos3val){
                 console.log(`Winner${pos1val}!`);
                 showWinner(pos1val);
+                btnclicks = 0;
             }else{
                 if(btnclicks>9){
+                    btnclicks = 0;
                     draw();
                 }
             }
