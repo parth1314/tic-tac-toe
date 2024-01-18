@@ -31,7 +31,7 @@ boxes.forEach((box)=>{
             box.innerText = "X";
             turn0 = true;
         }
-        btnclicks++;
+        if(btnclicks<=9)btnclicks++;
         box.disabled = true;
         checkwinner();
     })
@@ -70,7 +70,7 @@ const checkwinner = () =>{
                 console.log(`Winner${pos1val}!`);
                 showWinner(pos1val);
             }else{
-                if(btnclicks===9){
+                if(btnclicks>9){
                     draw();
                 }
             }
